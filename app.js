@@ -1,4 +1,3 @@
-
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { TextInput } from 'react-native-web';
 
@@ -21,6 +20,11 @@ export default function App() {
       </View>
 
       </View>
+
+      <TouchableOpacity style={styles.botaozinho}>
+        <Text style={styles.textodobotaozinho}>Botão Teste</Text>
+      </TouchableOpacity>
+
     </View>
   );
 }
@@ -34,8 +38,19 @@ const styles = StyleSheet.create({
     // height: 500
   },
 
-  botao1: {
-    backgroundColor: "gray",
+  botaozinho: {
+    backgroundColor: "#F40B5D",
+    borderRadius: 30,
+    padding: 10, 
+    width: 350,
+    margin: 5,
+  },
+
+  textodobotaozinho: {
+    textAlign: "center",
+    color: "white",
+    fontSize: 17,
+    fontStyle: "bold",
   },
 
   tituloLogin: {
