@@ -1,64 +1,31 @@
-import { StyleSheet } from 'react-native';
+import { Text, TouchableOpacity, View, TextInput } from 'react-native';
+// import fundoBranco from './assets/fundoBranco.png'
+import styles from './styles'; // importa os estilos de outro arquivo
 
-export default StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    backgroundColor: "#FFF9F2",
-  },
+export default function App() {
+  return (
+    // <ImageBackground
+    // source={fundoBranco}
+    // style={styles.background}>
 
-  botaozinho: {
-    backgroundColor: "#FFC88A",
-    borderRadius: 30,
-    padding: 10, 
-    width: 350,
-    marginTop: -10,
-  },
+      <View style={styles.container}>
+        <Text style={styles.tituloLogin}>Login</Text>
+        {/* <hr style={styles.hrs}></hr> */}
 
-  textodobotaozinho: {
-    textAlign: "center",
-    color: "#FFF5EB",
-    fontSize: 17,
-    fontStyle: "bold",
-  },
+        <View style={styles.inputs}>
+          {/* <Text style={styles.texto}>Nome ou CPF</Text> */}
+          <TextInput style={styles.input1} placeholder="Digite seu nome completo" />
 
-  tituloLogin: {
-    color: "#FFC88A",
-    marginTop: 250,
-    fontSize: 55,
-  },
+          {/* <Text style={styles.texto}>Senha</Text> */}
+          <TextInput style={styles.input1} placeholder="Digite sua senha" />
+        </View>
 
-  hrs: {
-    backgroundColor: "#FFC88A",
-    width: 100,
-  },
+        <TouchableOpacity style={styles.botaozinho}>
+          <Text style={styles.textodobotaozinho}>Botão Teste</Text>
+        </TouchableOpacity>
 
-  input1: {
-    // textAlign: "center",
-    color: "#FFC88A",
-    borderColor: "#FFC88A",
-    borderWidth: 1,
-    borderRadius: 30,
-    padding: 10, 
-    width: 350,
-    fontSize: 17,
-    marginBottom:10,
-  },
+      </View>
 
-  input2: {
-    color: "#FFC88A",
-    // textAlign: "center",
-    borderColor: "#FFC88A",
-    borderWidth: 1,
-    borderRadius: 30,
-    padding: 10, 
-    width: 350,
-    fontSize: 17,
-  },
-
-  inputs: {
-    padding: 10,
-    borderColor: "black",
-  },
-
-});
+    // </ImageBackground>
+  );
+}
