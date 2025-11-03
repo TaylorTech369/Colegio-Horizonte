@@ -1,81 +1,64 @@
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { TextInput } from 'react-native-web';
+import { StyleSheet } from 'react-native';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-
-      <Text style={styles.tituloLogin}>Login</Text>
-      <hr style={styles.hrs}></hr>
-      
-      <View>
-
-      <View style={styles.inputs}>
-
-      <Text style={styles.texto}>Nome ou CPF</Text>
-      <TextInput style={styles.input1} placeholder='Digite seu nome completo'></TextInput>
-
-      <Text style={styles.texto}>Senha</Text>
-      <TextInput style={styles.input1 } placeholder='Digite sua senha'></TextInput>
-      </View>
-
-      </View>
-
-      <TouchableOpacity style={styles.botaozinho}>
-        <Text style={styles.textodobotaozinho}>Botão Teste</Text>
-      </TouchableOpacity>
-
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
+export default StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',
     alignItems: 'center',
-    // justifyContent: 'center',
-    // height: 500
+    backgroundColor: "#FFF9F2",
   },
 
   botaozinho: {
-    backgroundColor: "#F40B5D",
+    backgroundColor: "#FFC88A",
     borderRadius: 30,
     padding: 10, 
     width: 350,
-    margin: 5,
+    marginTop: -10,
   },
 
   textodobotaozinho: {
     textAlign: "center",
-    color: "white",
+    color: "#FFF5EB",
     fontSize: 17,
     fontStyle: "bold",
   },
 
   tituloLogin: {
+    color: "#FFC88A",
     marginTop: 250,
     fontSize: 55,
   },
 
   hrs: {
+    backgroundColor: "#FFC88A",
     width: 100,
   },
 
   input1: {
-    borderColor: "black",
+    // textAlign: "center",
+    color: "#FFC88A",
+    borderColor: "#FFC88A",
     borderWidth: 1,
     borderRadius: 30,
     padding: 10, 
     width: 350,
-    margin: 5,
+    fontSize: 17,
+    marginBottom:10,
+  },
+
+  input2: {
+    color: "#FFC88A",
+    // textAlign: "center",
+    borderColor: "#FFC88A",
+    borderWidth: 1,
+    borderRadius: 30,
+    padding: 10, 
+    width: 350,
+    fontSize: 17,
   },
 
   inputs: {
     padding: 10,
     borderColor: "black",
   },
-  texto: {
-    
-  }
+
 });
